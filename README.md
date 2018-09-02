@@ -31,3 +31,6 @@ RUN docker-php-source extract && docker-php-ext-install mysqli && docker-php-sou
 
 ### przekazanie zmiennych środowiskowych ###
 ```docker run -d --rm --name=weather-app -p 38000:80 -v /c/Users/projects/tuts/first-php-docker-application/weather-app:/var/www/html --link weather-db -e DATABASE_HOST='weather-db' -e DATABASE_USER='admin' -e DATABASE_PASSWORD='p23l%v11p' -e DATABASE_NAME='weather' shiphp/weather-app```
+
+### wejście do kontenera ###
+```docker exec -it weather-db bash```
