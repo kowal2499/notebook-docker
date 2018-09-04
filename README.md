@@ -26,7 +26,7 @@ FROM php:apache
 RUN docker-php-source extract && docker-php-ext-install mysqli && docker-php-source delete
 ```
 
-#### build ####
+### build ###
 ```docker build . -t shiphp/weather-app```
 ```docker build --file .docker/Dockerfile -t laravel-docker . ```
 
@@ -41,3 +41,9 @@ RUN docker-php-source extract && docker-php-ext-install mysqli && docker-php-sou
 
 ### wejście do kontenera ###
 ```docker exec -it weather-db bash```
+
+### docker-compose zbuduj ###
+```docker-compose build```
+
+### bash ###
+```docker-compose exec app bash```
